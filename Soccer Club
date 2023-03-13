@@ -1,0 +1,64 @@
+//Program to enter two members of soccer club
+#include <iostream>
+using namespace std;
+using std::cout;
+using std::endl;
+//Enumerations for player positions
+enum playerPosition {
+	Goalkeeper = 1,
+	Midfielder = 2,
+	Striker = 3,
+	Winger = 4,
+	Defender = 5
+};
+//Struct for player information
+struct soccer {
+	int playerNumber;
+	
+	float playerTopSpeed;
+	enum playerPosition;
+};
+//main fuction
+int main() {
+	cout << "Hamilton Soccer Club\n\n";
+
+	int playerNumber;
+	cout << "Enter Player Number: \n";
+	cin >> playerNumber;
+	cout << endl;
+
+	float playerTopSpeed;
+	cout << "Enter Player Top Speed: \n";
+	cin >> playerTopSpeed;
+	cout << endl;
+
+	int playerPosition;
+	cout << "Player Position\n";
+	cout << "Pick from one of the following: \n";
+	cout << "1 = Goalkeeper\n";
+	cout << "2 = Midfielder\n";
+	cout << "3 = Striker\n";
+	cout << "4 = Winger\n";
+	cout << "5 = Defender\n";
+
+	cin >> playerPosition;
+		
+// Printing output for player
+	cout << "\nPlayer Information\n" << endl;
+	cout << "Player Number: " << playerNumber << endl;
+	cout << "Player Top Speed: " << playerTopSpeed << " mph" << endl;
+// User input to select Player Position from list
+	switch (playerPosition) {
+    case 1: cout << "Goalkeeper\n";
+		break;
+	case 2: cout << "Midfielder\n";
+		break;
+	case 3: cout << "Striker\n";
+		break;
+	case 4: cout << "Winger\n";
+		break;
+	case 5: cout << "Defender\n";
+		break;		
+	}
+	return 0;
+}
